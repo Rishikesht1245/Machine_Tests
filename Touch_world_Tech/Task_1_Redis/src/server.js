@@ -1,5 +1,5 @@
 import express from "express";
-import dataRoutes from "./data.routes.js";
+import dataRoutes from "./routes/data.routes.js";
 import { config } from "dotenv";
 
 config();

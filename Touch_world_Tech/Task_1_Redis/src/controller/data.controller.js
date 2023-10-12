@@ -1,8 +1,7 @@
-import redis from "./redisClient.js";
+import redis from "../redisClient.js";
 
 export const dataController = {
   storeData: (req, res, next) => {
-    console.log("store");
     const { key, value } = req.body;
     try {
       redis.set(key, value);
