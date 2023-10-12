@@ -1,11 +1,16 @@
 import express from "express";
 import dataRoutes from "./data.routes.js";
+import { config } from "dotenv";
+
+config();
 
 const app = express();
-app.use(express.json());
+const PORT = process.env.PORT || 3000;
 
+app.use(express.json());
 app.use("/api", dataRoutes);
 
+// error handling middleware
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || "Internal Server Error";
@@ -16,6 +21,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
