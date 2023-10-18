@@ -184,7 +184,7 @@
       id="carouselExampleCaptions"
       class="carousel slide container-fluid slider"
     >
-      <div class="carousel-indicators mb-5">
+      <div class="carousel-indicators mb-md-5 mb-1">
         <button
           type="button"
           data-bs-target="#carouselExampleCaptions"
@@ -287,9 +287,9 @@
     <!-- section 2 -->
     <div class="section-2 flex-column">
       <!-- section 2 - cards -->
-      <div class="d-flex justify-content-center gap-4 flex-wrap">
+      <div class="d-flex justify-content-center gap-md-4 gap-1 flex-wrap">
         <!-- card -1 -->
-        <div class="card mb-3">
+        <div class="card">
           <div
             class="card-body"
             style="
@@ -313,7 +313,7 @@
         </div>
 
         <!-- card - 2 -->
-        <div class="card mb-3">
+        <div class="card">
           <div
             class="card-body"
             style="
@@ -337,7 +337,7 @@
         </div>
 
         <!-- card -3 -->
-        <div class="card mb-3">
+        <div class="card">
           <div
             class="card-body"
             style="
@@ -362,12 +362,127 @@
       </div>
 
       <!-- section 2 - trending products -->
-      <div class="d-flex flex-column mt-5">
+      <div class="d-flex flex-column mt-5 trending-products">
+        <!-- heading -->
         <div class="d-flex align-items-center justify-content-center my-3">
-          <hr class="flex-grow-1 d-sm-hidden ms-5" />
-          <h3 class="fs-4 mx-4">Trending Products</h3>
-          <hr class="flex-grow-1 d-sm-hidden me-5" />
+          <hr class="flex-grow-1 d-none d-md-block mx-2" />
+          <h3 class="fs-4 mx-2">Trending Products</h3>
+          <hr class="flex-grow-1 d-none d-md-block mx-2" />
         </div>
+
+        <!-- description -->
+        <p class="fs-6 text-secondary fw-medium text-center mb-5">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, odit!
+        </p>
+
+        <!-- images -->
+        <div class="mx-auto">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container mx-auto">
+                <img src="./assets/images/image-20.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-21.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-22.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-23.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-24.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-25.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-26.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="image-container">
+                <img src="./assets/images/image-27.jpg" alt="Image 1" />
+                <span class="fs-6 d-block">Wooden container Bowl</span>
+                <span>
+                  $96.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$96.00</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- load more button -->
+        <button class="btn my-4 w-25 mx-auto text-uppercase load-more-btn">
+          Load more
+        </button>
       </div>
     </div>
 
