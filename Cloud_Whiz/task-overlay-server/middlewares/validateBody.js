@@ -7,6 +7,7 @@ export const validateBody = (validationSchema) => async (req, res, next) => {
     });
     next();
   } catch (error) {
+    console.log(error);
     next(errorHandler(401, error.errors?.[0] || "Invalid data"));
   }
 };
