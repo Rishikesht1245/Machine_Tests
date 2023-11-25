@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import homeIcon from "../assets/homeIcon.png";
+import homeIcon from "../../assets/homeIcon.png";
 
 const Header = () => {
   return (

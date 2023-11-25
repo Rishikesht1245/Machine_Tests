@@ -1,11 +1,40 @@
 import ReactModal from "react-modal";
 
-const Modal = ({ isOpen, children, heading, closeHandler }) => {
+const Modal = ({ isOpen, children, heading, closeHandler, type }) => {
   // binding the modal to the app
   ReactModal.setAppElement("#root");
 
+  const modalCustomStyles = {
+    display: "flex",
+    flexDirection: "column",
+    borderRadius: "8px",
+    justifyContent: "center",
+    zIndex: 10,
+    margin: "auto",
+    padding: "25px",
+    background: "white",
+    maxHeight: "90%",
+    minHeight: "30%",
+  };
+
+  const slideInCustomStyles = {
+    position: "absolute",
+    left: 0,
+    display: "flex",
+    flexDirection: "column",
+    zIndex: 10,
+    borderRadius: "8px",
+    bottom: 0,
+    padding: "20px",
+    border: "none",
+    background: "white",
+    maxHeight: "90%",
+    minHeight: "30%",
+  };
+
   return (
     <ReactModal
+      closeTimeoutMS={500}
       className="w-full lg:w-2/4 xl:w-2/5 items-center justify-center focus:outline-none gap-3"
       isOpen={isOpen}
       style={{
@@ -14,18 +43,8 @@ const Modal = ({ isOpen, children, heading, closeHandler }) => {
           background: "rgba(0,0,0,0.5)",
           display: "flex",
         },
-        content: {
-          display: "flex",
-          flexDirection: "column",
-          borderRadius: "8px",
-          justifyContent: "center",
-          zIndex: 10,
-          margin: "auto",
-          padding: "25px",
-          background: "white",
-          maxHeight: "90%",
-          minHeight: "30%",
-        },
+        content:
+          type === "overlayModal" ? modalCustomStyles : slideInCustomStyles,
       }}
       contentLabel="Example Modal"
       bodyOpenClassName={"ReactModal__Body--open"}

@@ -20,3 +20,19 @@
 .parent-container {
   @apply bg-[rgba(255,255,255,1)] w-full md:max-w-xl p-2 rounded-lg lg:p-10 shadow-xl m-2 my-8 flex flex-col;
 }
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.7s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateX(-100px);
+}
