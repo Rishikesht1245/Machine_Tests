@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { settingsContext } from "../store/SettingsContext";
 import Loader from "../components/Loader";
+import Modal from "../components/Modal";
+import ModalForm from "../components/forms/ModalForm";
+import SlideInForm from "../components/forms/SlideInForm";
 
 const Home = () => {
   const { settings, loading } = useContext(settingsContext);
@@ -25,6 +28,32 @@ const Home = () => {
       setShowForm(false);
     }
   }, [settings?.displayRule]);
-  return <>{loading ? <Loader /> : <div>Hello</div>}</>;
+  return (
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="relative">
+          <div className="flex items-center justify-center w-full">
+            <div className="parent-container">
+              <h1 className="text-center">Home</h1>
+            </div>
+          </div>
+          {showForm &&
+            (settings?.overlayType === "overlayModal" ? (
+              <Modal
+                isOpen={showForm}
+                heading={settings?.title}
+                closeHandler={setShowForm}
+              >
+                <ModalForm closeHandler={setShowForm} />
+              </Modal>
+            ) : (
+              <SlideInForm settings={settings} />
+            ))}
+        </div>
+      )}
+    </>
+  );
 };
 export default Home;

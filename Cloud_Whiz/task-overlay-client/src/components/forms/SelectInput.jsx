@@ -13,7 +13,7 @@ const SelectInput = ({
       {edit && label && (
         <label
           htmlFor={name}
-          className="text-sm font-semibold mb-1 ml-1 tracking-widest text-blue-900"
+          className="text-sm font-semibold mb-1 ml-1 tracking-widest text-primary"
         >
           {label}
         </label>

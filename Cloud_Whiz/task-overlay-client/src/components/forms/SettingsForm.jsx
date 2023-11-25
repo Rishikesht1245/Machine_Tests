@@ -13,7 +13,7 @@ import Button from "./Button.jsx";
 import { settingsContext } from "../../store/SettingsContext.jsx";
 
 const SettingsForm = ({ fetchHandler }) => {
-  const { settings, loading } = useContext(settingsContext);
+  const { settings, loading, setSettings } = useContext(settingsContext);
   const [errorMessage, setErrorMessage] = useState(null);
 
   const overlayOptions = useMemo(() => [

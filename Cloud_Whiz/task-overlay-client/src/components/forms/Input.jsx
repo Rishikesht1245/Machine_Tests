@@ -6,7 +6,7 @@ const Input = ({ name, placeholder, className, type, edit }) => {
       {edit && (
         <label
           htmlFor={name}
-          className="text-sm font-semibold mb-1 ml-1 text-blue-900 tracking-widest"
+          className="text-sm font-semibold mb-1 ml-1 text-primary tracking-widest"
         >
           {placeholder}
         </label>
