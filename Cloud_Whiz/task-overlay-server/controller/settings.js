@@ -6,7 +6,7 @@ export const createSettings = async (req, res, next) => {
   try {
     const newSettings = new settingsModel(req.body);
     await newSettings.save();
-    res.status(201).json("Settings created!");
+    res.status(201).json({ data: newSettings, message: "Settings created!" });
   } catch (error) {
     next(error);
   }
@@ -31,7 +31,9 @@ export const editSettings = async (req, res, next) => {
       req.body,
       { new: true }
     );
-    res.status(200).json(updatedSettings);
+    res
+      .status(200)
+      .json({ data: updatedSettings, message: "Settings updated!" });
   } catch (error) {
     next(error);
   }

@@ -1,11 +1,20 @@
 import express from "express";
 import cors from "cors";
 import connectDB from "./config/connectDB.js";
-import subscriptionRoutes from "./router/subscription.js";
+import subscriptionRoutes from "./routes/subscription.js";
 import { config } from "dotenv";
 config();
 
 const app = express();
+
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: "GET,PUT,PATCH,POST,DELETE",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 connectDB();
 
